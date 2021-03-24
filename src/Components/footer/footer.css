@@ -1,0 +1,25 @@
+.mainFooter {
+	height: 20vh;
+	background: #f13636;
+	box-shadow: 1rem 0 1.5rem #f13636;
+}
+.footerContainer {
+	display: flex;
+	justify-content: center;
+}
+.footerRows {
+	display: flex;
+	width: 50%;
+	justify-content: space-between;
+	/* align-items:center; */
+	flex-direction: row;
+}
+h2 {
+	margin: 20px;
+}
+.list {
+	text-align: center;
+}
+li {
+	list-style-type: none;
+}

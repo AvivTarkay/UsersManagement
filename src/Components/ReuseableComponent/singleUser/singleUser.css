@@ -1,0 +1,87 @@
+.singleCard {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	align-items: center;
+	justify-content: center;
+	height: 600px;
+	width: 80%;
+	min-width: 250px;
+	position: relative;
+	left: 150px;
+	padding: 1.5rem;
+	margin-bottom: 30px;
+	border-radius: 16px;
+	background: #17141d;
+	box-shadow: -1rem 0 3rem #000;
+}
+.card-user {
+	position: relative;
+	top: 30px;
+}
+
+.card-user h2 {
+	font-size: 20px;
+	margin: 0.25rem 0 auto;
+	text-decoration: none;
+	color: inherit;
+	border: 0;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.card-user h2:hover {
+	background: linear-gradient(90deg, #ff8a00, #e52e71);
+	text-shadow: none;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+#singleBtn {
+	width: 200px;
+}
+.span-name-prefix {
+	display: block;
+	font-style: normal;
+	font-weight: 700;
+	color: #7a7a8c;
+}
+#userName {
+	font-size: 45px;
+}
+.half-circle-avatar {
+	position: relative;
+	bottom: 100px;
+	left: 0;
+	width: 250px;
+	height: 100px;
+	fill: none;
+	stroke: #ff8a00;
+	stroke-width: 8;
+	stroke-linecap: round;
+	pointer-events: none;
+}
+.user-avatar {
+	position: relative;
+	left: 11px;
+}
+.user-avatar img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	filter: grayscale(100%);
+	display: block;
+	overflow: hidden;
+	margin: 8px 15px;
+}
+.author-info {
+	position: relative;
+	bottom: 50px;
+}
+#leaveBack {
+	color: #fff;
+}
+.singleCard {
+	margin-top: 30px;
+}

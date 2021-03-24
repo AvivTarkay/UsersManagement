@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+* {
+	box-sizing: border-box;
+	/* margin: 0;
+	padding: 0; */
+	font-family: "Nunito", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+	background: linear-gradient(45deg, #f11948 30%, #ff7553 90%);
+  border: 0;
+  border-radius: 3;
+  box-shadow: 0 3px 5px 2px rgba(255, 105, 135, .3);
   color: white;
+  padding: 0 30px;
+	outline: none;
+	width: 100%;
+	padding: 15px 0; 
+	font-size: 16px;
+	letter-spacing: 1px;
+	cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+
+.UsersOutput {
+	background: #603bbb;
+
+}
+.logosContainer{
+	position: relative;
+	right:300px;
+	display: flex;
+  width: 35%;
+	justify-content: space-around;
+	align-items: center;
+}
+.logosContainer > a> img{
+	width: 150px;
+	height: 70px;
+}
+.logosContainer > a> img:hover{
+	cursor: pointer;
+}
+.navLinks {
+	width: 100%;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navLinks nav {
+	background: #f13636;
+	width: 100%;
+	height: 12vh;
+	padding: 20px 40px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navLinks nav button {
+	width: 86px;
+	padding: 8px 0;
+	color: #fff;
+	background: #3a2b58;
+}
+.logoImg {
+	width: 25%;
+	height: auto;
+}
+.logoImg > img {
+	width: 70%;
+	height: 75px;
+}
+.error {
+	color: red;
+}
+/* #logOut {
+	width: 150px;
+	height: 60px;
+	border-radius: 35px;
+} */
+#userEmail {
+	position: relative;
+	top: 10px;
+	right: 10px;
 }
