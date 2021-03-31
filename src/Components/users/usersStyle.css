@@ -13,7 +13,9 @@ body {
 }
 .card-list {
 	display: flex;
+
 	padding: 3rem;
+	min-height: 100vh;
 	overflow-x: scroll;
 	margin-bottom: 13px;
 }
