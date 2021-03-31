@@ -27,16 +27,16 @@ const Footer = () => {
 						<h2>Social</h2>
 						<ul className="list">
 							<li>
-								facebook<i class="fa fa-facebook"></i>
+								<i class="fa fa-facebook"></i>
 							</li>
 							<li>
-								twitter <i class="fa fa-twitter"></i>
+								<i class="fa fa-twitter"></i>
 							</li>
 							<li>
-								github<i class="fa fa-github"></i>
+								<i class="fa fa-github"></i>
 							</li>
 							<li>
-								linkedin<i class="fa fa-linkedin" aria-hidden="true"></i>
+								<i class="fa fa-linkedin" aria-hidden="true"></i>
 							</li>
 						</ul>
 					</div>

@@ -13,9 +13,9 @@ import MailIcon from "@material-ui/icons/Mail";
 import { usersContext } from "../ReuseableComponent/usersContext";
 
 const useStyles = makeStyles({
-	list: {
+	root: {
 		width: 250,
-		backgroundColor: "#f13636",
+		backgroundColor: "#097e78",
 		boxShadow: "0 0 1rem 0 rgba(0, 0, 0, .2)",
 	},
 	fullList: {
@@ -59,7 +59,7 @@ export default function TemporaryDrawer() {
 
 	const list = anchor => (
 		<div
-			className={clsx(classes.list, {
+			className={clsx(classes.root, {
 				[classes.fullList]: anchor === "top" || anchor === "bottom",
 			})}
 			role="presentation"

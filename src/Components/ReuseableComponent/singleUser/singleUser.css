@@ -4,16 +4,14 @@
 	align-self: center;
 	align-items: center;
 	justify-content: center;
-	height: 600px;
-	width: 80%;
+	height: 100vh;
+	width: 70%;
 	min-width: 250px;
-	position: relative;
-	left: 150px;
 	padding: 1.5rem;
-	margin-bottom: 30px;
 	border-radius: 16px;
 	background: #17141d;
 	box-shadow: -1rem 0 3rem #000;
+	margin-bottom: 30px;
 }
 .card-user {
 	position: relative;
@@ -25,7 +23,7 @@
 	margin: 0.25rem 0 auto;
 	text-decoration: none;
 	color: inherit;
-	border: 0;
+
 	display: inline-block;
 	cursor: pointer;
 }
@@ -81,6 +79,9 @@
 }
 #leaveBack {
 	color: #fff;
+	position: relative;
+	left: 25%;
+	font-size: 25px;
 }
 .singleCard {
 	margin-top: 30px;

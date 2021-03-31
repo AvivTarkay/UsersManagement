@@ -12,12 +12,11 @@ body {
 	font-family: "DM Mono", monospace;
 }
 .card-list {
+	width: 100%;
 	display: flex;
-
 	padding: 3rem;
 	min-height: 100vh;
 	overflow-x: scroll;
-	margin-bottom: 13px;
 }
 
 .card-list::-webkit-scrollbar {
