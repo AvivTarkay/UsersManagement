@@ -1,11 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import Users from "../users/users";
-import Login from "../ReuseableComponent/Login/Login";
 import { usersContext } from "./usersContext";
 import SingleUser from "./singleUser/SingleUser";
 import NavigationBar from "../NavBar/NavigationBar";
-import FormSignUp from "../Form/FormSignUp";
-
+import Footer from "../footer/footer";
+import Form from "../Form/Form";
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -13,19 +12,16 @@ import {
 	Redirect,
 } from "react-router-dom";
 import "./usersOutput.css";
-import Footer from "../footer/footer";
 
 export default function UsersOutput() {
-	const { haveAccount, wantLogout, currentUser } = useContext(usersContext);
+	const { currentUser, validUsers } = useContext(usersContext);
 	return (
 		<React.Fragment>
 			<NavigationBar />
-
+			<Form />
 			<Router>
 				<Switch>
-					<Route exact path="/" component={FormSignUp} />
 					<Route path="/Users" component={Users} />
-					<Route path="/Login" component={Login} />
 				</Switch>
 				<Switch>
 					{currentUser ? (
@@ -34,8 +30,7 @@ export default function UsersOutput() {
 						<Redirect from="/User/:_id" to="/Users" />
 					)}
 				</Switch>
-				<Switch>{haveAccount && <Redirect to="/Login" />}</Switch>
-				<Switch>{wantLogout && <Redirect to="/Login" />}</Switch>
+				<Switch>{validUsers && <Redirect to="/Users" />}</Switch>
 			</Router>
 			<Footer />
 		</React.Fragment>
