@@ -1,6 +1,9 @@
 import React, { useContext, useState } from "react";
 import { usersContext } from "../../ReuseableComponent/usersContext";
 import { Link, useHistory } from "react-router-dom";
+import Button from "../../Button/Button";
+import { makeStyles } from "@material-ui/core/styles";
+import TogglePassword from "../../ReuseableComponent/togglePassword/TogglePassword";
 
 const Login = () => {
 	const {
@@ -11,10 +14,13 @@ const Login = () => {
 		setValidUsers,
 		setBtnDisable,
 		setUserEmail,
+		selected,
 	} = useContext(usersContext);
+
 	const [user, setUser] = useState("");
 	const [pass, setPass] = useState("");
 	const history = useHistory();
+	const styleCss = useStyle();
 
 	const validateUserAndSignIn = e => {
 		e.preventDefault();
@@ -47,27 +53,31 @@ const Login = () => {
 			<div className="loginContainer">
 				<form onSubmit={validateUserAndSignIn}>
 					<label htmlFor="">userName</label>
-					<input type="text" onChange={getUserNameInfo} autoFocus required />
+					<input
+						type="text"
+						onChange={getUserNameInfo}
+						autoFocus
+						required
+						className={styleCss.formInput}
+					/>
 					{errMsg && (
-						<p className="error">
-							something went wrong check userName or password
-						</p>
+						<p className="error">login info are incorrect, please try again.</p>
 					)}
 					<label>Password</label>
 					<input
-						type="password"
+						type={selected ? "text" : "password"}
 						onChange={getUserPassInfo}
 						autoFocus
 						autoFocus
 						required
+						className={styleCss.formInput}
 					/>
 					{errMsg && (
-						<p className="error">
-							something went wrong check userName or password
-						</p>
+						<p className="error">login info are incorrect, please try again.</p>
 					)}
+					<TogglePassword />
 					<div className="btnContainer">
-						<button type="submit">Sign in</button>
+						<Button type="submit" />
 						<p>
 							Don't Have an account ?
 							<Link to="/">
@@ -80,5 +90,13 @@ const Login = () => {
 		</section>
 	);
 };
-
+const useStyle = makeStyles({
+	formInput: {
+		width: "50%",
+		height: "40px",
+		borderRadius: "15px",
+		border: "none",
+		outline: "none",
+	},
+});
 export default Login;

@@ -6,6 +6,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import "./formSignUp.css";
+import Button from "../../Button/Button";
+import TogglePassword from "../../ReuseableComponent/togglePassword/TogglePassword";
 
 const schema = yup.object().shape({
 	userName: yup.string().required(),
@@ -23,6 +25,7 @@ const FormSignUp = () => {
 		addUsersToLocalStorage,
 		errMsg,
 		setErrMsg,
+		selected,
 	} = useContext(usersContext);
 	const [errMsgPass, setErrMsgPass] = useState(false);
 
@@ -79,12 +82,10 @@ const FormSignUp = () => {
 						ref={register}
 						className={styleCss.formInput}
 					/>
-
 					<p className="error"> {errors.email?.message} </p>
-
 					<label htmlFor="password">Password:</label>
 					<input
-						type="password"
+						type={selected ? "text" : "password"}
 						autoFocus
 						name="password"
 						ref={register}
@@ -94,7 +95,7 @@ const FormSignUp = () => {
 					{errMsgPass && <p className="error">Password already in use</p>}
 					<label htmlFor="confirmPassword">Confirm Password:</label>
 					<input
-						type="password"
+						type={selected ? "text" : "password"}
 						autoFocus
 						name="confirmPassword"
 						ref={register}
@@ -103,10 +104,11 @@ const FormSignUp = () => {
 					<p className="error">
 						{errors.confirmPassword && "Passwords Should Match!"}{" "}
 					</p>
+					<TogglePassword />
 					<div className="btnContainer">
 						{
 							<React.Fragment>
-								<button type="submit">Sign up</button>
+								<Button type="submit" />
 								<p>
 									Have an account ?
 									<Link to="/Login">

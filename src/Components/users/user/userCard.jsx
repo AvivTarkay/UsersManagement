@@ -22,8 +22,8 @@ const UserCard = ({ usersData }) => {
 	};
 	return (
 		<React.Fragment>
-			<article class="card">
-				<header class="card-header">
+			<article className="card">
+				<header className="card-header">
 					<Link id="user" to={`/User/:${_id}`}>
 						<h2
 							onClick={() => {
@@ -35,19 +35,19 @@ const UserCard = ({ usersData }) => {
 						</h2>
 					</Link>
 				</header>
-				<div class="author-name">
-					<span class="author-name-prefix">Company: </span>
+				<div className="author-name">
+					<span className="author-name-prefix">Company: </span>
 					{company}
 				</div>
-				<div class="card-author">
-					<a class="author-avatar" href="#">
+				<div className="card-author">
+					<a className="author-avatar" href="#">
 						<img src={process.env.PUBLIC_URL + "/userAvatar.png"} />
 					</a>
-					<svg class="half-circle" viewBox="0 0 106 57">
+					<svg className="half-circle" viewBox="0 0 106 57">
 						<path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
 					</svg>
 				</div>
-				<div class="tags">
+				<div className="tags">
 					<a href="#" style={style}>
 						{isActive ? "Active" : "Loged-Out"}
 					</a>

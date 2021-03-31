@@ -17,13 +17,13 @@ export const UsersContext = ({ children }) => {
 	const [getUsers, setGetUser] = useState([]);
 	const [userInfo, setUserInfo] = useState([]);
 	const [userEmail, setUserEmail] = useState("");
+	const [selected, setSelected] = useState("");
 
 	const FetchUsers = async () => {
 		try {
 			const usersResponse = await fetch(usersApi);
 			const usersData = await usersResponse.json();
 			setGetUser(usersData);
-			console.log(usersData);
 		} catch (err) {
 			throw err;
 		} finally {
@@ -69,6 +69,8 @@ export const UsersContext = ({ children }) => {
 				setBtnDisable,
 				userEmail,
 				setUserEmail,
+				selected,
+				setSelected,
 			}}
 		>
 			{children}

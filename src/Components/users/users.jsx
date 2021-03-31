@@ -9,7 +9,7 @@ const Users = () => {
 	const { getUsers } = useContext(usersContext);
 
 	return (
-		<section class="card-list">
+		<section className="card-list">
 			{getUsers.length > 0 &&
 				React.Children.toArray(
 					getUsers.map(user => {

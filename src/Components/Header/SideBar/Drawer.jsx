@@ -10,7 +10,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 
-import { usersContext } from "../ReuseableComponent/usersContext";
+import { usersContext } from "../../ReuseableComponent/usersContext";
 
 const useStyles = makeStyles({
 	root: {
@@ -73,8 +73,7 @@ export default function TemporaryDrawer() {
 					</ListItemIcon>
 					<ListItemText primary="LOGOUT" />
 				</ListItem>
-				{/* <Router>
-					<Link to="/Users"> */}
+
 				<ListItem
 					button
 					onClick={() => {
@@ -86,8 +85,6 @@ export default function TemporaryDrawer() {
 					</ListItemIcon>
 					<ListItemText primary="USERS" />
 				</ListItem>
-				{/* </Link>
-				</Router> */}
 			</List>
 		</div>
 	);
