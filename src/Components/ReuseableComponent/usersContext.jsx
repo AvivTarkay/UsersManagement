@@ -18,6 +18,7 @@ export const UsersContext = ({ children }) => {
 	const [userInfo, setUserInfo] = useState([]);
 	const [userEmail, setUserEmail] = useState("");
 	const [selected, setSelected] = useState("");
+	const [goToSignUp, setGoToSignUp] = useState(false);
 
 	const FetchUsers = async () => {
 		try {
@@ -71,6 +72,8 @@ export const UsersContext = ({ children }) => {
 				setUserEmail,
 				selected,
 				setSelected,
+				goToSignUp,
+				setGoToSignUp,
 			}}
 		>
 			{children}

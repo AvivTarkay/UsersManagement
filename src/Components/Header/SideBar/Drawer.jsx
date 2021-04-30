@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 	},
 });
 
-export default function TemporaryDrawer() {
+export default function TemporaryDrawer({ setHomeOrForm }) {
 	const {
 		setCurrentUser,
 		setWantLogout,
@@ -39,6 +39,7 @@ export default function TemporaryDrawer() {
 	});
 	const HandleLogOut = () => {
 		setWantLogout(prevState => !prevState);
+		setHomeOrForm(prevState => !prevState);
 		setValidUsers(false);
 		setBtnDisable(true);
 		setErrMsg("");

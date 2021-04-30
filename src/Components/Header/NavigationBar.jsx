@@ -5,23 +5,35 @@ import { makeStyles } from "@material-ui/core/styles";
 import Avatar from "@material-ui/core/Avatar";
 import TemporaryDrawer from "./SideBar/Drawer";
 
-const NavigationBar = () => {
+const NavigationBar = ({ setHomeOrForm }) => {
 	const { AvatarName, userEmail, validUsers } = useContext(usersContext);
 	const classes = useStyles();
 
 	return (
-		<section className="navLinks">
-			<nav>
-				<TemporaryDrawer />
-				<div className="logosContainer">
+		<section className={classes.rgb}>
+			<nav className={classes.root}>
+				<TemporaryDrawer setHomeOrForm={setHomeOrForm} />
+				<div className={classes.logos}>
 					<a href="">
-						<img src={process.env.PUBLIC_URL + "/codeIn.jpeg"} alt="#" />
+						<img
+							className={classes.image}
+							src={process.env.PUBLIC_URL + "/codeIn.jpeg"}
+							alt="#"
+						/>
 					</a>
 					<a>
-						<img src={process.env.PUBLIC_URL + "/tecCareer.jpeg"} alt="#" />
+						<img
+							className={classes.image}
+							src={process.env.PUBLIC_URL + "/tecCareer.jpeg"}
+							alt="#"
+						/>
 					</a>
 					<a href="https://www.younglod.com/" target="_blank">
-						<img src={process.env.PUBLIC_URL + "/theStation.jpeg"} alt="#" />
+						<img
+							className={classes.image}
+							src={process.env.PUBLIC_URL + "/theStation.jpeg"}
+							alt="#"
+						/>
 					</a>
 				</div>
 
@@ -40,12 +52,22 @@ const NavigationBar = () => {
 const useStyles = makeStyles(theme => ({
 	root: {
 		display: "flex",
+		justifyContent: "space-between",
+	},
+	logos: {
+		width: "50%",
+		display: "flex",
+		justifyContent: "space-around",
 	},
 	rgb: {
-		background: "green",
+		background: "#097e78",
 	},
 	userDefColor: {
 		background: "none",
+	},
+	image: {
+		width: "190px",
+		height: "90px",
 	},
 }));
 

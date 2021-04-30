@@ -13,12 +13,12 @@ import {
 } from "react-router-dom";
 import "./usersOutput.css";
 
-export default function UsersOutput() {
+export default function UsersOutput({ setHomeOrForm }) {
 	const { currentUser, validUsers, wantLogout } = useContext(usersContext);
 	return (
 		<React.Fragment>
-			<NavigationBar />
-			<Form />
+			<NavigationBar setHomeOrForm={setHomeOrForm} />
+			{/* {!validUsers && <Form />} */}
 			<Router>
 				<Switch>
 					<Route path="/Users" component={Users} />
